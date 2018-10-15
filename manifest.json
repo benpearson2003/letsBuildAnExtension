@@ -1,0 +1,27 @@
+// First thing's first, this is a comment line. You can put anything you want after two slashes.
+// Anything after two slashes won't be treated like code.
+
+// What you're reading now is the "manifest" file. It tells Chrome what the extension needs.
+// "browser_action" adds a button to the Chrome toolbar.
+// "description", "manifest_version", "name", "permissions", "update_url", and "version" are just additional ways of
+// describing your extension. The three super necessary ones are "manifest_version", "permissions", and "version".
+// "manifest_version" refers to the format of the this file itself. Chrome currently only supports version 2.
+// "permissions" are the Chrome features the extension needs to run. "activeTab" tells Chrome you need access to
+// whichever tab the user is looking at. "storage" is necessary to keep track of what changes and can even be used to
+// sync across multiple devices.
+// "version" is the version of the app. We'll start at version 0.1 and increment like 0.2, 0.3, etc as we save changes
+// until we decide to publish it. Then it will be 1.0. If we keep working on the app, it'll become 1.1, etc.
+
+// Feel free to forget all of that and open popup.js (don't confuse it with popup.html).
+{
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+   },
+   "description": "Quickly find vacancies in city government in the state of Arkansas",
+   "manifest_version": 2,
+   "name": "Political Vacancies, Arkansas Cities",
+   "permissions": [ "tabs", "activeTab", "storage", "http://*/", "https://*/" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1"
+}
